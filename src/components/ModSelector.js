@@ -6,8 +6,8 @@ import { useState, useEffect } from 'react'
 function ModSelector() {
     const [selected, setSelected] = useState([])
 
-    const handleChange = (event) => {
-        setSelected([event.target.value])
+    const handleChange = (e) => {
+        setSelected([e.target.value])
         console.log(selected)
     }
 
