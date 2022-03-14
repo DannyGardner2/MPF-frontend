@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from "react";
 import axios from 'axios'
 
-const Results = () => {
+const Results = (selected) => {
     const url = "http://localhost:4000"
     const [results, setResults] = useState([])
     useEffect(() => {
@@ -9,16 +9,26 @@ const Results = () => {
         .then((res) => res.json())
         .then((json) => setResults(json))
     },[])
+
+    console.log(selected.mod)
     return (
         <div className="results-container">
             {results.map(item => {
-                return (
-                    <div className="results-card">
-                        <img src={item.thumbnail}/>
-                    </div>
-                )
+                if(item.mods.includes(`${selected.mod}`)){
+                    return (
+                        <div className="results-card">
+                            <a href={item.link} target="_blank"><img src={item.thumbnail}/></a>
+                        </div>
+                    )
+                } else if(item.mods.includes('')){
+                    return (
+                        <div className="results-card">
+                            <a href={item.link} target="_blank"><img src={item.thumbnail}/></a>
+                        </div>
+                    )
+                }
             })}
-
+        
         </div>
     )
 }
