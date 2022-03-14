@@ -1,5 +1,4 @@
 import { React, useState, useEffect } from "react";
-import axios from 'axios'
 
 const Results = (selected) => {
     const url = "http://localhost:4000"
@@ -20,7 +19,7 @@ const Results = (selected) => {
                             <a href={item.link} target="_blank"><img src={item.thumbnail}/></a>
                         </div>
                     )
-                } else if(item.mods.includes('')){
+                } else if(selected.mod == ('')){
                     return (
                         <div className="results-card">
                             <a href={item.link} target="_blank"><img src={item.thumbnail}/></a>
