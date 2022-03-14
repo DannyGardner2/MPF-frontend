@@ -7,7 +7,57 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.App {
+  background-image: url("../img/mainback.jpg");
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.mod-selector-container {
+  min-width: 504px;
+  max-width: 840px;
+  height: 400px;
+  background-color: rgb(46, 46, 46);
+  margin: 50px auto;
+  display: flex;
+  color: white;
+}
+
+.mod-selector-container button {
+  width: 168px;
+  height: 40px;
+}
+
+.results-card img {
+  width: 180px;
+  margin-left: 20px;
+  margin-top: 20px;
+  border: 2px solid white;
+}
+
+.results-container {
+  max-width:840px;
+  min-width:504;
+  min-height: 700px;
+  background-color: rgb(46, 46, 46);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-container {
+  height: 60px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+}
+
+.nav-container p {
+  margin-left: 30px;
+  margin-top: 15px;
+  font-weight: 500;
 }
