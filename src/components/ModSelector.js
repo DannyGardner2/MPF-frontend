@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Results from './Results'
 import Mods from '../Mods.json'
 
@@ -19,8 +19,8 @@ function ModSelector() {
             <div className='mod-selector-container'>
                 {Mods.map(item => {
                     return (
-                        <div className='inputs'>
-                            <input className="checked" type="checkbox" onClick={handleChange} value={item}/><label>{item}</label>
+                        <div key={item} className='inputs'>
+                            <input className="checked" type="checkbox" onClick={handleChange} value={item} /><label>{item}</label>
                         </div>
                     )
                 })}
