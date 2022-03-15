@@ -13,7 +13,7 @@ const Results = (selected) => {
     return (
         <div className="results-container">
             {results.map(item => {
-                if(item.mods.includes(`${selected.mod}`)){
+                if(selected.mod.every(i => item.mods.includes(i))){
                     return (
                         <div className="results-card">
                             <a href={item.link} target="_blank"><img src={item.thumbnail}/></a>
@@ -27,7 +27,6 @@ const Results = (selected) => {
                     )
                 }
             })}
-        
         </div>
     )
 }

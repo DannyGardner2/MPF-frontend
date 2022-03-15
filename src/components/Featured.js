@@ -15,7 +15,7 @@ function Featured() {
             {results.map(item => {
                 return (
                     <div className="results-card">
-                        <img src={item.thumbnail}/>
+                        <a href={item.link} target="_blank"><img src={item.thumbnail} /></a>
                     </div>
                 )
             })}

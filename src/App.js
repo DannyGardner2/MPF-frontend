@@ -5,6 +5,7 @@ import ModSelector from './components/ModSelector';
 import Results from './components/Results';
 import { Route, Routes } from 'react-router-dom';
 import Featured from './components/Featured';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<ModSelector />}/>
         <Route path="/browse" element={<Featured />}/>
       </Routes>
+      <Footer />
     </div>
   );
 }

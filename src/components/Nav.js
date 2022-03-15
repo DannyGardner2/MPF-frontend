@@ -6,7 +6,6 @@ function Nav() {
         <div className='nav-container'>
             <Link to="/"><p>Find Modpacks</p></Link>
             <Link to="/browse"><p>Browse Modpacks</p></Link>
-            <p>About</p>
         </div>
     )
 }
