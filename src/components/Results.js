@@ -1,18 +1,11 @@
 import { React, useState, useEffect } from "react";
+import Modpacks from '../Modpacks.json'
 
 const Results = (selected) => {
-    const url = "http://localhost:4000"
-    const [results, setResults] = useState([])
-    useEffect(() => {
-        fetch(url)
-        .then((res) => res.json())
-        .then((json) => setResults(json))
-    },[])
 
-    console.log(selected.mod)
     return (
         <div className="results-container">
-            {results.map(item => {
+            {Modpacks.map(item => {
                 if(selected.mod.every(i => item.mods.includes(i))){
                     return (
                         <div className="results-card">
