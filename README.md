@@ -9,7 +9,7 @@ for this idea is that when my friends and I are choosing what pack to play, we h
 
 # Wireframe
 
-![image](c1.png)
+![image](img/c1.png)
 
 # Stretch Goals
 
