@@ -6,6 +6,9 @@ import Mods from '../Mods.json'
 function ModSelector() {
     const [selected, setSelected] = useState([])
 
+    const style1 = {}
+    const style2 = {backgroundColor: 'blue'}
+
     const handleChange = (e) => {
         if(e.target.checked){
             setSelected([...selected, e.target.value])
@@ -20,7 +23,7 @@ function ModSelector() {
                 {Mods.map(item => {
                     return (
                         <div key={item} className='inputs'>
-                            <input className="checked" type="checkbox" onClick={handleChange} value={item} /><label>{item}</label>
+                            <input id={item} className="checked" type="checkbox" onClick={handleChange} value={item} /><label for={item} style={style1}>{item}</label>
                         </div>
                     )
                 })}
